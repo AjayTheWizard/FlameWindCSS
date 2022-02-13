@@ -1,0 +1,56 @@
+summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details {
+  margin-bottom: 0px;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #dee2e6;
+}
+details:not(:last-child) {
+  border-bottom: 0.7px solid rgb(149, 146, 146);
+}
+details > p {
+  margin: 1rem;
+  padding: 0;
+  display: none;
+  opacity: 0;
+  transition: 400ms;
+}
+details[open] > p {
+  display: block;
+  opacity: 1;
+}
+summary:active {
+  background-color: #eee;
+  outline: none;
+}
+summary {
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 500ms;
+}
+details > summary:first-child:before {
+  content: url("data:image/svg+xml; utf8,<svg height='18' style='margin-right: 1rem;' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 5l7 7-7 7M5 5l7 7-7 7' /></svg>");
+  margin-right: 0.7rem;
+}
+details[open] > summary:first-child:before {
+  content: url('data:image/svg+xml; utf8,<svg height="18" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" /></svg>');
+  margin-right: 0.7rem;
+}
+details[open] > summary {
+  background-color: #e7f1ff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  color: #0c79ea;
+}
+.accordians {
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #eee;
+}
